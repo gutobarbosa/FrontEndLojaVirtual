@@ -1,17 +1,15 @@
 import React from 'react';
-import {Switch, Route} from 'react-router-dom';
+
+import { Switch, Route } from 'react-router-dom';
 
 import Dashboard from '../pages/Dashboard';
-import Repository from '../pages/Repository';
+import Product from '../pages/Product';
 
-// rota da url, nesse caso a nossa rota atual é a raiz então vai apenas a / e o componente é que sera acessado através desse endereço url
-const Routes: React.FC = () =>{
-    return (
-        <Switch>
-            <Route path="/" exact component={Dashboard} />
-            <Route path="/repositories/:repository+" component={Repository} />
-        </Switch>
-    );
-}
+const Routes: React.FC = () => (
+  <Switch>
+    <Route path="/" exact component={Dashboard} />
+    <Route path="/product" component={Product} />
+  </Switch>
+);
 
 export default Routes;
